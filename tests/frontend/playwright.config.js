@@ -1,0 +1,2 @@
+const { defineConfig } = require('@playwright/test');
+module.exports = defineConfig({testDir:'.',testMatch:'*.spec.js',workers:1,use:{baseURL:'http://127.0.0.1:5081',headless:true},webServer:{command:'dotnet run --project ../../src/RoomBooking --no-launch-profile --urls http://127.0.0.1:5081',url:'http://127.0.0.1:5081',reuseExistingServer:false,env:{'Database__Path':require('path').join(require('os').tmpdir(),'booking-ui-'+Date.now()+'.db')}}});

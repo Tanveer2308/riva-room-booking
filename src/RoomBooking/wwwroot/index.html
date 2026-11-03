@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Room Booking</title><link rel="stylesheet" href="styles.css"><script src="app.js" defer></script></head>
+<body><main><header><p class="eyebrow">MEETING SPACES</p><h1>A room for your next idea.</h1><p>Reserve a meeting room. All dates and times are in <strong>UTC</strong>.</p></header>
+<div class="layout"><section class="panel"><h2>Book a room</h2><form id="booking-form">
+<label for="day">Date (UTC)</label><input id="day" type="date" required>
+<label for="room">Meeting room</label><select id="room" required></select>
+<label for="name">Your name</label><input id="name" maxlength="100" required autocomplete="name">
+<div class="times"><div><label for="start">Start (UTC)</label><input id="start" type="time" required></div><div><label for="end">End (UTC)</label><input id="end" type="time" required></div></div>
+<button id="book" type="submit">Book room</button></form><p id="message" role="status" aria-live="polite"></p></section>
+<section aria-label="Room availability"><div class="schedule-heading"><h2>Daily schedule</h2><button type="button" id="refresh" class="secondary">Refresh</button></div><p class="hint">Adjacent bookings are welcome. Cancel a booking to release its time.</p><div id="schedule"></div></section></div></main></body></html>
