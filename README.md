@@ -1,17 +1,17 @@
-# Riva — Meeting Room Booking
+# Riva - Meeting Room Booking
 
 A small ASP.NET Core 8 application with a plain JavaScript frontend and persistent SQLite database. No login, cloud account, containers, or paid services are required.
 
 ## Run locally (Windows)
 
-Install the .NET 8 SDK. Extract this project into `D:\Riva_Assesment` and open PowerShell in the folder containing `RoomBooking.sln`.
+Install the .NET 8 SDK. Extract this project into a local folder and open PowerShell in the folder containing `RoomBooking.sln`.
 
 ```powershell
 dotnet restore
 dotnet run --project src/RoomBooking
 ```
 
-Open http://localhost:5080. Alternatively, open `RoomBooking.sln` in Visual Studio 2022 with the ASP.NET workload, select RoomBooking as the startup project, and run it.
+Open `RoomBooking.sln` in Visual Studio 2022 with the ASP.NET workload, select RoomBooking as the startup project, and run it.
 
 SQLite creates `bookings.db` automatically and seeds Room A, Room B, and Room C. No external database setup is needed. Stop the application and remove the database plus its `-wal`/`-shm` companions to reset the local demo. Never remove a live database.
 
